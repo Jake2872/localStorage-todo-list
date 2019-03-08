@@ -1,0 +1,273 @@
+html {
+    background-color: rgb(236, 236, 236);
+    font-family: 'Tajawal', sans-serif;
+ /*important for operations*/
+     
+     -webkit-tap-highlight-color: transparent;
+     -webkit-text-size-adjust: 100%;
+ }
+
+
+ body {
+     -ms-user-select: none;
+     -moz-user-select: none;
+     -webkit-user-select: none;
+     user-select: none;
+ 
+     max-width: 400px;
+     margin-right: auto;
+     margin-left: auto;
+     padding: 20px 10px 80px 20px;
+ }
+
+ 
+ h1 {
+     font-size: 1.70rem;
+     text-align: center;
+     color: rgb(77, 11, 68);
+     letter-spacing: 2px;
+     margin-bottom: 30px;
+ }
+ 
+ #form {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     max-height: 43px;
+     overflow: hidden; 
+ }
+ 
+ input[type="text"] {
+ 
+     width: 70%;
+     padding-left: 10px;
+     border-radius: 0px;
+     box-sizing: border-box;
+     height: 43px;
+     font-size: 20px;
+     border: 1px solid transparent;
+ }
+ 
+ input[type="text"]:focus {
+     border: 1px solid rgb(217, 185, 253);
+     outline: none;
+ }
+ 
+ input[type="submit"]{
+     box-sizing: border-box;
+     width: 90px;
+     height: 43px;
+     letter-spacing: 3px;
+     background-color: rgb(54, 2, 47);
+     color: rgb(229, 227, 231);
+     border: none;
+     font-size: 20px;
+-webkit-appearance: none;
+-webkit-border-radius: 0px;
+ }
+ 
+ input[type="submit"]:focus {
+     outline: none;
+ 
+ }
+ 
+ .toggleColorInput {
+     display: none;
+ }
+ 
+ #submitButtonInput:active {
+ 
+     background-color: rgb(116, 34, 119);
+ 
+ }
+ 
+ ul {
+     list-style: none;
+     padding: 0 0 5px 0; 
+     margin: 0;
+     letter-spacing: 1px;
+
+     /*covers/hides the footer*/
+     background-color: rgb(236, 236, 236);
+
+    animation-name: ULAnimation;
+     animation-duration: 1.35s;
+     animation-timing-function: ease;
+     animation-direction: alternate;
+ }
+
+ 
+ @keyframes ULAnimation {
+ 
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+
+ 
+ li {
+     font-size: 25px;
+     background-color: #fff;
+     color: rgb(54, 2, 47);
+     margin: 8% 4%;
+     overflow: hidden;
+     padding: 15px;
+     word-break: break-all;
+ 
+     transition-property: all;
+     transition-duration: 0.4s;
+     transition-timing-function: ease-out;*/
+ }
+ 
+ li {
+     animation-name: slideIn;
+     animation-duration: 1.35s;
+     animation-timing-function: ease;
+     animation-direction: alternate;
+ }
+ 
+ @keyframes slideIn {
+ 
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+ 
+ .toggleLineThrough {
+     opacity: 0.5;
+     text-decoration: line-through;
+     color: gray;
+
+     
+     animation-name: lineThrough !important;
+     animation-duration: 1s;
+     animation-timing-function: ease;
+     animation-direction: alternate;
+     animation-fill-mode: forwards;*/
+ }
+
+ 
+ @keyframes lineThrough {
+ 
+    100% {
+        transform: scale(0.85);
+    }
+}
+ 
+ .displayNoneX {
+     display: none;
+ }
+ 
+ .spanXDelete {
+     
+    box-sizing: border-box;
+     font-size: 45px;
+     opacity: 1; /*opacity is overwritten by something*/
+     font-family: sans-serif;
+     color: red;
+
+     background-color: rgb(234, 233, 235);
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     border-radius: 50%;
+     padding-top: 0px;
+ }
+ 
+ .spanXDelete, .colorPickerInput {
+ 
+     margin: 0 15px 0 10px;
+     float: right;
+ }
+ 
+ .colorPickerInput {
+ 
+     float: right;
+     height: 30px;
+     width: 30px;
+     padding: 1px;
+     border-radius: 20px;
+     background-color: #BC01A2;
+     border: 1px solid transparent;
+ }
+ 
+ .colorPickerInput:focus {
+     outline: none;
+ }
+ 
+ /*the plus shortcut*/
+ 
+ .addShortcut__button {
+ 
+     box-sizing: border-box;
+     background-color: rgb(45, 95, 60);
+     color: white;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     font-size: 50px;
+ 
+     position: fixed;
+     bottom: 70px; 
+     right: 45px;
+ 
+     display: flex;
+     justify-content: center;
+     cursor: pointer;
+ 
+     transition-property: background-color, color;
+     transition-duration: 0.50s, 0.50s;
+     transition-timing-function: ease-in;
+ 
+     opacity: 0.95;
+     align-items: center;
+     font-family: normal;
+     
+ }
+
+
+ .transparentPlusToggle {
+     opacity: 1;
+     color: transparent;
+     background-color: transparent;
+     box-shadow: none;
+ }
+ 
+ 
+ footer {
+
+    position: fixed;
+    right: 0;
+    left: 20px;
+    bottom: 20px;
+    text-align: center;
+    z-index: -2;
+    font-size: 20px;
+    
+ }
+
+ footer a {
+     color: black;
+     cursor: pointer;
+/*     text-decoration-color: rgb(95, 216, 95);*/
+ }
+
+ footer a:hover, footer a:active {
+    color: rgb(0, 128, 21);;
+
+
+}
