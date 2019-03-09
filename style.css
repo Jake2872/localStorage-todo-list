@@ -123,7 +123,7 @@ html {
  
      transition-property: all;
      transition-duration: 0.4s;
-     transition-timing-function: ease-out;*/
+     transition-timing-function: ease-out;
  }
  
  li {
@@ -195,14 +195,18 @@ html {
  }
  
  .colorPickerInput {
- 
+     box-sizing: border-box;
      float: right;
-     height: 30px;
-     width: 30px;
+     height: 40px;
+     width: 40px;
      padding: 1px;
-     border-radius: 20px;
+     border-radius: 50%;
      background-color: #BC01A2;
-     border: 1px solid transparent;
+     border: 0 solid transparent;
+     /*padding hides the square in the color inut shape so it's not confused with a check(-off) box*/
+     padding-right: 40px;
+     padding-top: 40px;
+     overflow: hidden;
  }
  
  .colorPickerInput:focus {

@@ -67,6 +67,12 @@ function addItemToArrayViaSubmitButton(e) {
     
     ul.addEventListener("input", localStoreColorChanges);
     
+    let isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        }
+    
+    }
     
 
 function createItem(e) {
@@ -89,19 +95,13 @@ function createItem(e) {
 
     inputField.value = ""; 
 
-    let isMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        }
-    
-    }
 
     if(isMobile.Android()) {
 
         let colorPicker = document.createElement('input');
         colorPicker.setAttribute("type", "color");
         colorPicker.className = "colorPickerInput";
-        colorPicker.setAttribute("value", "#bc01a2");
+        colorPicker.setAttribute("value", "#f4beed");
         newLI.appendChild(colorPicker);
         }
 
@@ -146,12 +146,6 @@ e.target.classList.toggle("toggleLineThrough");
 
 e.target.querySelector(".spanXDelete").classList.toggle("displayNoneX");
 
-let isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    }
-
-}
 if( isMobile.Android()) {
     let colorPicker = e.target.querySelector(".colorPickerInput");
     colorPicker.classList.toggle("toggleColorInput");    
