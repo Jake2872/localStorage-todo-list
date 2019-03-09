@@ -113,17 +113,19 @@ html {
 
  
  li {
-     font-size: 25px;
+     font-size: 22px;
      background-color: #fff;
      color: rgb(54, 2, 47);
      margin: 8% 4%;
      overflow: hidden;
-     padding: 15px;
-     word-break: break-all;
- 
+     padding: 15px; 
      transition-property: all;
      transition-duration: 0.4s;
      transition-timing-function: ease-out;
+     word-break: break-word;
+     -webkit-hyphens: auto;
+     -ms-hyphens: auto;
+     hyphens: auto;
  }
  
  li {
