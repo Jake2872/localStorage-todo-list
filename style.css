@@ -123,9 +123,6 @@ html {
      transition-duration: 0.4s;
      transition-timing-function: ease-out;
      word-break: break-word;
-     -webkit-hyphens: auto;
-     -ms-hyphens: auto;
-     hyphens: auto;
  }
  
  li {
